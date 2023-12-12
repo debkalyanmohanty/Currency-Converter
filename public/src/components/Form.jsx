@@ -4,7 +4,7 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import axios from 'axios';
-// import { BASE_URL } from '../api/client';
+import { CONVERT_API } from '../../api/convert';
 
 
 export default function Form() {
@@ -20,7 +20,7 @@ export default function Form() {
       date: date
     }
     axios
-    .post("http://localhost:8000/api/convert", data)
+    .post(CONVERT_API, data)
     .then(res => {
        setPrice(res.data.price);
     })
