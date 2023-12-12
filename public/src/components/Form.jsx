@@ -4,7 +4,6 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import axios from 'axios';
-import { CONVERT_API } from '../../api/convert';
 
 
 export default function Form() {
@@ -12,6 +11,7 @@ export default function Form() {
   const [toCurrency , SetToCurrency] = React.useState('');
   const [price , setPrice] = React.useState('');
   const [date , setDate] = React.useState('');
+  const CONVERT_API = "https://currency-converter-dj8x.onrender.com/api/convert"
 
   const handlePost = () => {
     const data = {
